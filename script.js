@@ -1,5 +1,6 @@
 document.title="Promise Task 3"
 
+// below function is used to fetch data using api given in url
 let url="https://api.jikan.moe/v4/anime"
 async function getAnimeData(){
     let data=await fetch(url)
@@ -10,10 +11,9 @@ async function getAnimeData(){
 getAnimeData()
 
 let mainAnimeDiv=document.getElementById('mainAnimeDiv')
-//console.log(mainAnimeDiv)
 
+// this function is used to show all data using bootstraap card in to mainAnimeDiv
 function showAnime(animes){
-  //  console.log(animes)
     animes.map((element,index)=>{
         let animeDiv=document.createElement('div')
         animeDiv.classList.add("col","anime")
